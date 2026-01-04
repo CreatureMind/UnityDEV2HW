@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class MoveAgent : MonoBehaviour
@@ -12,10 +13,13 @@ public class MoveAgent : MonoBehaviour
         PlayerInputMethods.OnInputPerformed += SendInputToAgent;
     }
 
-    private void SendInputToAgent(InputType inputType, Vector2 inputPosition)
+    private void SendInputToAgent(InputType inputType)
     {
         if (myMovementInputType != inputType) return;
+        Vector2 inputPosition = Mouse.current.position.ReadValue();
+        
         Physics.Raycast(Camera.main.ScreenPointToRay(inputPosition), out var hit);
+        Debug.Log(hit.collider.gameObject.name + hit.point);
         agent.SetDestination(hit.point);
     }
 
