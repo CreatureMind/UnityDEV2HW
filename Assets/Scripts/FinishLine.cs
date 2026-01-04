@@ -30,7 +30,7 @@ public class FinishLine : MonoBehaviour
     void ShowWinUI(string winnerName)
     {
         winPanel.SetActive(true);
-        winText.text = $"{winnerName} Won the race!";
+        winText.text = $"{winnerName} \nWon the race!";
         Time.timeScale = 0f;
     }
 }
