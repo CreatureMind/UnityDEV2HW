@@ -540,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controlled_Unit_LMB
       objectReference: {fileID: 0}
+    - target: {fileID: 5220170952182964953, guid: 30bc5021361f80f4a825b8f1763d6291, type: 3}
+      propertyPath: myMovementInputType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7543871291916629650, guid: 30bc5021361f80f4a825b8f1763d6291, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9476328
@@ -689,6 +693,10 @@ PrefabInstance:
     - target: {fileID: 279326573369053946, guid: 3562898fb58e926498a4c0c59ed514ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531213358894794417, guid: 3562898fb58e926498a4c0c59ed514ba, type: 3}
+      propertyPath: myMovementInputType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8205825167097299008, guid: 3562898fb58e926498a4c0c59ed514ba, type: 3}
       propertyPath: m_Name

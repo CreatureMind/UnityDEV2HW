@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -8,10 +9,24 @@ public class MoveAgent : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private InputType myMovementInputType;
     
+    private const string FinishLineAreaName = "FinishLine";
+    
+    public static event Action<GameObject> PlayerTouchedFinishLine;
+    
     public void Awake()
     {
         PlayerInputMethods.OnInputPerformed += SendInputToAgent;
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(FinishLineAreaName))
+        {
+            PlayerTouchedFinishLine?.Invoke(gameObject);
+        }
+    }
+    
+    
 
     private void SendInputToAgent(InputType inputType)
     {

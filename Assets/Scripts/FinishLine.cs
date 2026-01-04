@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,18 +10,23 @@ public class FinishLine : MonoBehaviour
     public TextMeshProUGUI winText;
     private bool raceFinished = false;
 
-    private void OnTriggerEnter(Collider other)
+    public void Awake()
+    {
+        MoveAgent.PlayerTouchedFinishLine += OnPlayerTouchedFinishLine;
+    }
+
+    private void OnPlayerTouchedFinishLine(GameObject player)
     {
         if (raceFinished)
             return;
-        NavMeshAgent agent = other.GetComponent<NavMeshAgent>();
-        if (agent == null)
+        if (!player.CompareTag("Player"))
             return;
         raceFinished = true;
-        string winnerName = other.gameObject.name.Replace("(Clone)", "");
+        string winnerName = player.name.Replace("(Clone)", "");
         ShowWinUI(winnerName);
     }
-
+    
+    
     void ShowWinUI(string winnerName)
     {
         winPanel.SetActive(true);
