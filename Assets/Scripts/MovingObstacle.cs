@@ -15,6 +15,6 @@ public class MovingObstacle : MonoBehaviour
     void Update()
     {
         float offset = Mathf.PingPong(Time.time * speed, distance);
-        transform.position = startPos + new Vector3(0, 0, offset);
+        transform.position = startPos + new Vector3(offset, 0, 0);
     }
 }
