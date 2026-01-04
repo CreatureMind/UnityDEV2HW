@@ -553,8 +553,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4037880248780279453}
   - component: {fileID: 3093153302720268975}
+  - component: {fileID: 6995219747905697339}
   - component: {fileID: -3624532999412741271}
   - component: {fileID: 1727232119763730866}
+  - component: {fileID: 2183509525602125588}
   m_Layer: 0
   m_Name: FatPlayer
   m_TagString: Player
@@ -601,6 +603,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6995219747905697339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151782251858208117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9834f03091427a34d8b13e305082889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveAgent
+  agent: {fileID: 1727232119763730866}
+  myMovementInputType: 1
 --- !u!114 &-3624532999412741271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +652,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &2183509525602125588
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151782251858208117}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2179613731614938020
 GameObject:
   m_ObjectHideFlags: 0

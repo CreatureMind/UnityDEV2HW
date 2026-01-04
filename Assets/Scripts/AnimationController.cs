@@ -12,30 +12,15 @@ public class AnimationController : MonoBehaviour
 
     private const float CrossFadeTime = .1f;
 
-    private void OnEnable()
-    {
-        EventPublisher.OnIdle += PlayIdleAnimation;
-        EventPublisher.OnRun += PlayRunAnimation;
-        EventPublisher.OnJump += PlayJumpAnimation;
-    }
-
-    private void OnDisable()
-    {
-        EventPublisher.OnIdle -= PlayIdleAnimation;
-        EventPublisher.OnRun -= PlayRunAnimation;
-        EventPublisher.OnJump -= PlayJumpAnimation;
-    }
-
-    private void PlayIdleAnimation()
+    public void PlayIdleAnimation()
     {
         animator.CrossFadeInFixedTime(Idle, CrossFadeTime);
     }
-
-    private void PlayRunAnimation()
+    public void PlayRunAnimation()
     {
         animator.CrossFadeInFixedTime(Run, CrossFadeTime);
     }
-    private void PlayJumpAnimation()
+    public void PlayJumpAnimation()
     {
         animator.CrossFadeInFixedTime(Jump, 0f);
     }
