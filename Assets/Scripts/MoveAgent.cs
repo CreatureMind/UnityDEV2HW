@@ -19,6 +19,7 @@ public class MoveAgent : MonoBehaviour
         Vector2 inputPosition = Mouse.current.position.ReadValue();
         
         Physics.Raycast(Camera.main.ScreenPointToRay(inputPosition), out var hit);
+        if (hit.collider == null) return;
         Debug.Log(hit.collider.gameObject.name + hit.point);
         agent.SetDestination(hit.point);
     }
