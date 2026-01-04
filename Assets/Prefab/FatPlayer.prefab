@@ -553,6 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4037880248780279453}
   - component: {fileID: 3093153302720268975}
+  - component: {fileID: -3624532999412741271}
   - component: {fileID: 1727232119763730866}
   m_Layer: 0
   m_Name: FatPlayer
@@ -588,9 +589,9 @@ Animator:
   m_GameObject: {fileID: 2151782251858208117}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
-  m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9110a414e6b0b4acaafdff57b5e120e0, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -600,6 +601,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3624532999412741271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151782251858208117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a53d44e9eaa42cab9beff3cbbe80ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationController
+  animator: {fileID: 3093153302720268975}
 --- !u!195 &1727232119763730866
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -610,7 +624,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 7
   avoidancePriority: 50
   m_AngularSpeed: 100
