@@ -21,13 +21,13 @@ public class MoveAgent : MonoBehaviour
 
     #region MONO_BEHAVIOUR_METHODS
 
-    public void Awake()
+    private void Awake()
     {
         PlayerInputMethods.OnInputPerformed += SendInputToAgent;
         agent.autoTraverseOffMeshLink = false;
     }
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(FinishLineAreaName))
         {
@@ -35,7 +35,7 @@ public class MoveAgent : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (agent.isOnOffMeshLink)
         {
@@ -55,7 +55,7 @@ public class MoveAgent : MonoBehaviour
         }
     }
 
-    public void OnValidate()
+    private void OnValidate()
     {
         if (agent == null)
         {

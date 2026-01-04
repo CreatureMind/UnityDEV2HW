@@ -10,7 +10,7 @@ public class FinishLine : MonoBehaviour
     public TextMeshProUGUI winText;
     private bool raceFinished = false;
 
-    public void Awake()
+    private void Awake()
     {
         MoveAgent.PlayerTouchedFinishLine += OnPlayerTouchedFinishLine;
     }
