@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9046460181805401778, guid: 3b5cd7842f0b42e448d4198d8baf93b5, type: 3}
       propertyPath: m_TagString
-      value: FInalLine
+      value: FinishLine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

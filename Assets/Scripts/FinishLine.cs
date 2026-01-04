@@ -14,6 +14,8 @@ public class FinishLine : MonoBehaviour
     {
         MoveAgent.PlayerTouchedFinishLine += OnPlayerTouchedFinishLine;
     }
+    
+    
 
     private void OnPlayerTouchedFinishLine(GameObject player)
     {
