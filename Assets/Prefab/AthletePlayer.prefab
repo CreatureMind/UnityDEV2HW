@@ -328,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7615071848053896492}
   - component: {fileID: 4673579119103290665}
+  - component: {fileID: 9040761220001168222}
   - component: {fileID: 8050331116952645809}
   m_Layer: 0
   m_Name: AthletePlayer
@@ -363,9 +364,9 @@ Animator:
   m_GameObject: {fileID: 1572311025963796287}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
-  m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9110a414e6b0b4acaafdff57b5e120e0, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -375,6 +376,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9040761220001168222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572311025963796287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a53d44e9eaa42cab9beff3cbbe80ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationController
+  animator: {fileID: 4673579119103290665}
 --- !u!195 &8050331116952645809
 NavMeshAgent:
   m_ObjectHideFlags: 0
