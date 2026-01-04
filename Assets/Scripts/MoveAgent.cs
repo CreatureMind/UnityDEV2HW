@@ -15,6 +15,8 @@ public class MoveAgent : MonoBehaviour
     [SerializeField] private float jumpHeight = 2.0f;
     [SerializeField] private float jumpDuration = 1.0f;
 
+    private bool isIdle = false;
+    
     private const string FinishLineAreaName = "FinishLine";
 
     public static event Action<GameObject> PlayerTouchedFinishLine;
@@ -47,11 +49,19 @@ public class MoveAgent : MonoBehaviour
 
         if (!agent.hasPath)
         {
-            animationController.PlayIdleAnimation();
+            if (!isIdle)
+            {
+                animationController.PlayIdleAnimation();
+                isIdle = true;
+            }
         }
         else
         {
-            animationController.PlayRunAnimation();
+            if (isIdle)
+            {
+                animationController.PlayRunAnimation();
+                isIdle = false;
+            }
         }
     }
 
@@ -94,7 +104,6 @@ public class MoveAgent : MonoBehaviour
     
     IEnumerator JumpRoutine()
     {
-        agent.enabled = false;
         animationController.PlayJumpAnimation();
 
         OffMeshLinkData linkData = agent.currentOffMeshLinkData;
@@ -120,6 +129,8 @@ public class MoveAgent : MonoBehaviour
 
         transform.position = endPos;
 
+        animationController.PlayIdleAnimation();
+        isIdle = true;
         agent.CompleteOffMeshLink();
         agent.enabled = true;
     }

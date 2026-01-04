@@ -593,7 +593,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
   m_Controller: {fileID: 9100000, guid: 9110a414e6b0b4acaafdff57b5e120e0, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 1
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -617,6 +617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveAgent
   agent: {fileID: 1727232119763730866}
   myMovementInputType: 1
+  animationController: {fileID: -3624532999412741271}
+  jumpHeight: 0.5
+  jumpDuration: 0.2
 --- !u!114 &-3624532999412741271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +670,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
